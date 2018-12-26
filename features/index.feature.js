@@ -21,7 +21,19 @@ describe('User can play game and get result', () => {
   });
 
   it('by clicking on the "Rock" button', async () => {
-    await browser.clickOnButton("button[name='rock']")
+    await browser.clickOnButton("button[name='rock-btn']")
+    let content = await browser.getContent("[id='result']")
+    expect(content).to.not.be.empty;
+  })
+
+  it('by clicking on the "Paper" button', async () => {
+    await browser.clickOnButton("button[name='paper-btn']")
+    let content = await browser.getContent("[id='result']")
+    expect(content).to.not.be.empty;
+  })
+
+  it('by clicking on the "Scissors" button', async () => {
+    await browser.clickOnButton("button[name='scissors-btn']")
     let content = await browser.getContent("[id='result']")
     expect(content).to.not.be.empty;
   })

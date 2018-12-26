@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   let rPS = new RPS
 
-  let rockDiv = document.getElementById('rock');
-  let paperDiv = document.getElementById('paper');
-  let scissorsDiv = document.getElementById('scissors');
+  let rockBtn = document.getElementById('rock-btn');
+  let paperBtn = document.getElementById('paper-btn');
+  let scissorsBtn = document.getElementById('scissors-btn');
   let instruction = document.getElementById('instruction');
   
   let computerSays = document.getElementById('computer-says');
@@ -12,17 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let computerChoice = rPS.computerChoice
 
-  rockDiv.addEventListener('click',function() {
+  rockBtn.addEventListener('click',function() {
     result.innerHTML = rPS.determineWinner("rock", computerChoice);
   });
 
-  // paperDiv.addEventListener('click', function() {
-  // result.innerHTML = determineWinner("paper", computerChoice);
-  // });
+  paperBtn.addEventListener('click', function() {
+    result.innerHTML = rPS.determineWinner("paper", computerChoice);
+  });
 
-  // scissorsDiv.addEventListener('click', function() {
-  // result.innerHTML = determineWinner("scissors", computerChoice);
-  // });
+  scissorsBtn.addEventListener('click', function() {
+    result.innerHTML = rPs.determineWinner("scissors", computerChoice);
+  });
 
 })
 
