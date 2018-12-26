@@ -16,10 +16,6 @@ describe('User can play game and get result', () => {
     await browser.close();
   });
  
-  it('/* description inserted here */', async () => {
-    //  Write tour scenario  
-  });
-
   it('by clicking on the "Rock" button', async () => {
     await browser.clickOnButton("button[name='rock-btn']")
     let content = await browser.getContent("[id='result']")

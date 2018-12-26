@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   scissorsBtn.addEventListener('click', function() {
-    result.innerHTML = rPs.determineWinner("scissors", computerChoice);
+    result.innerHTML = rPS.determineWinner("scissors", computerChoice);
   });
 
 })
