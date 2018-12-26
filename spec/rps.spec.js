@@ -17,7 +17,7 @@ describe('Rock Paper Scissors', () => {
     });
   })
 
-  describe('Player selects "paper"', () => {
+  context('Player selects "paper"', () => {
     it('should return "It\'s a tie!" on "paper", "paper"', () => {
         expect(rPS.determineWinner('paper', 'paper')).to.equal('It\'s a tie!');
     });
@@ -31,7 +31,7 @@ describe('Rock Paper Scissors', () => {
     });
   })
 
-  describe('Player selects "scissors"', () => {
+  context('Player selects "scissors"', () => {
     it('should return "It\'s a tie!" on "scissors", "scissors"', () => {
         expect(rPS.determineWinner('scissors', 'scissors')).to.equal('It\'s a tie!');
     });

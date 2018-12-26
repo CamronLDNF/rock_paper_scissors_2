@@ -1,5 +1,20 @@
 function RPS()  {
 
+  this.computerChoice = getComputerChoice()
+
+  let userChoice
+
+  function getComputerChoice() {
+      number = Math.floor(Math.random()*2)
+      switch (number) {
+      case 0:
+      return 'rock';
+      case 1:
+      return 'paper';
+      case 2:
+      return 'scissors';}
+  }
+
   this.determineWinner = (userChoice, computerChoice) => {
 
     //  scenarios where there is a tie
