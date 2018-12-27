@@ -1,8 +1,5 @@
 function RPS()  {
 
-  let computerSays = document.getElementById('computer-says');
-  let instruction = document.getElementById('instruction');
-
   this.getComputerChoice = function () {
     number = Math.floor(Math.random()*3)
     switch (number) {
@@ -12,17 +9,8 @@ function RPS()  {
     return 'paper';
     case 2:
     return 'scissors';}
-}
+  }
 
-  this.resetGame = function () {
-  // setTimeout(function(){ 
-  // computerImage.src = gameImage;
-  computerChoice = '';
-  userChoice = '';
-  computerSays.innerHTML = '';
-  instruction.innerHTML = 'Play again:';
-  // }, 1500);
-}
 
   this.determineWinner = (userChoice, computerChoice) => {
 
@@ -57,5 +45,6 @@ function RPS()  {
     return 'You lose!';
 
   }
+
 
 }
