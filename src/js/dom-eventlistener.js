@@ -30,16 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function resetGame() {
-  // setTimeout(function(){ 
-  // computerImage.src = gameImage;
-  computerChoice = '';
-  userChoice = '';
-  computerSays.innerHTML = '';
-  instruction.innerHTML = 'Play again:';
-  // }, 1500);
+
+    computerChoice = '';
+    userChoice = '';
+    computerSays.innerHTML = '';
+
+    setTimeout(function(){ 
+      computerImage.src = gameImage;
+      result.innerHTML = '';
+      instruction.innerHTML = 'Play again:';
+    }, 1500);
+
   }
 
   rockBtn.addEventListener('click', function() {
+    instruction.innerHTML = ' ';
     userChoice = "rock"
     computerChoice = rPS.getComputerChoice()
     result.innerHTML = rPS.determineWinner(userChoice, computerChoice);
