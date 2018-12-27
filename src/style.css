@@ -38,13 +38,16 @@ h1 {
   height: 150px;
 }
 #rock-btn {
-  background-image: url(https://res.cloudinary.com/itsellej/image/upload/v1533400140/rock-paper-scissors/rock.png);
+  background-image: url('./assets/rock.png');
+  background-size: 180px;
 }
 #paper-btn {
-  background-image: url(https://res.cloudinary.com/itsellej/image/upload/v1533400143/rock-paper-scissors/paper.png);
+  background-image: url('./assets/paper.png');
+  background-size: cover;
 }
 #scissors-btn {
-  background-image: url(https://res.cloudinary.com/itsellej/image/upload/v1533400140/rock-paper-scissors/scissors.png);
+  background-image: url('./assets/scissors.png');
+  background-size: cover;
 }
 #rock-btn, #paper-btn, #scissors-btn {
   width: 150px;
@@ -55,7 +58,6 @@ h1 {
   margin: 10px 7px;
   background-color: #527ebe;
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
 }
 #rock-btn:hover, #paper-btn:hover, #scissors-btn:hover {

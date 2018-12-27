@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   let rPS = new RPS
 
+  const gameImage = "src/assets/rps.png"
+  const rockImage = "src/assets/rock.png";
+  const paperImage = "src/assets/paper.png";
+  const scissorsImage = "src/assets/scissors.png";
+
   let rockBtn = document.getElementById('rock-btn');
   let paperBtn = document.getElementById('paper-btn');
   let scissorsBtn = document.getElementById('scissors-btn');
-  // let instruction = document.getElementById('instruction');
   
-  // let computerSays = document.getElementById('computer-says');
   let result = document.getElementById('result');
   let computerImage = document.getElementById('computerimage');
 
@@ -15,6 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let computerSays = document.getElementById('computer-says');
   let instruction = document.getElementById('instruction');
+
+  function changeComputerImage(computerChoice) {
+    if(computerChoice === 'rock') {
+        computerImage.src = rockImage;
+    } else if (computerChoice === 'paper') {
+        computerImage.src = paperImage;
+    } else if (computerChoice === 'scissors') {
+        computerImage.src = scissorsImage;
+    }
+  }
 
   function resetGame() {
   // setTimeout(function(){ 
@@ -30,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userChoice = "rock"
     computerChoice = rPS.getComputerChoice()
     result.innerHTML = rPS.determineWinner(userChoice, computerChoice);
+    changeComputerImage(computerChoice);
     resetGame();
   });
 
@@ -37,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userChoice = "paper"
     computerChoice = rPS.getComputerChoice()
     result.innerHTML = rPS.determineWinner(userChoice, computerChoice);
+    changeComputerImage(computerChoice);
     resetGame();
   });
 
@@ -44,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userChoice = "scissors"
     computerChoice = rPS.getComputerChoice()
     result.innerHTML = rPS.determineWinner(userChoice, computerChoice);
+    changeComputerImage(computerChoice);
     resetGame();
   });
 

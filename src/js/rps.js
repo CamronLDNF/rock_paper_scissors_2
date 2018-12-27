@@ -11,7 +11,6 @@ function RPS()  {
     return 'scissors';}
   }
 
-
   this.determineWinner = (userChoice, computerChoice) => {
 
     //  scenarios where there is a tie
