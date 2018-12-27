@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
   let result = document.getElementById('result');
   let computerImage = document.getElementById('computerimage');
+  let computerSays = document.getElementById('computer-says');
+  let instruction = document.getElementById('instruction');
 
   let computerChoice
   let userChoice
 
-  let computerSays = document.getElementById('computer-says');
-  let instruction = document.getElementById('instruction');
 
   function changeComputerImage(computerChoice) {
     if(computerChoice === 'rock') {
@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   paperBtn.addEventListener('click', function() {
+    instruction.innerHTML = ' ';
     userChoice = "paper"
     computerChoice = rPS.getComputerChoice()
     result.innerHTML = rPS.determineWinner(userChoice, computerChoice);
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   scissorsBtn.addEventListener('click', function() {
+    instruction.innerHTML = ' ';
     userChoice = "scissors"
     computerChoice = rPS.getComputerChoice()
     result.innerHTML = rPS.determineWinner(userChoice, computerChoice);
