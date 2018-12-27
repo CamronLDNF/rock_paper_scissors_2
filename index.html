@@ -2,42 +2,39 @@
 <html>
 <head>
 <title>Rock Paper Scissors</title>
-  <!-- <link href="./src/style.css" type="text/css" rel="stylesheet"> -->
+  <link href="./src/style.css" type="text/css" rel="stylesheet">
   <script src="./src/js/rps.js" defer></script>
   <script src="./src/js/dom-eventlistener.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
 
-        <h1>Rock Paper Scissors</h1>
+  <h1>Rock Paper Scissors</h1>
 
-        <div class="computer">
-            <div class="computerchoice"></div>
-            <!-- <img class="img-computer" id="computerimage" src="http://is5.mzstatic.com/image/thumb/Purple118/v4/63/2e/de/632ede7d-21ce-050f-7629-b9f4f0d2f833/source/512x512bb.png"> -->
-            <p id="computer-says">Computer says:</p>
-        </div>
-        
-        <div id="result"></div>
+  <div class="computer">
+    <div class="computerchoice"></div>
+    <!-- <img class="img-computer" id="computerimage" src="http://is5.mzstatic.com/image/thumb/Purple118/v4/63/2e/de/632ede7d-21ce-050f-7629-b9f4f0d2f833/source/512x512bb.png"> -->
+    <p id="computer-says">Computer says:</p>
+  </div>
 
-        <p id="instruction">Select your weapon of choice, amigo!</p>
-        <div class="choice">
-            <div class="select-choice count-in" id="rock">
-                <button name="rock-btn" id="rock-btn">Rock button</button>
-                <!-- <img class="img-rock" name="rock" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/WPVG_icon_2016.svg/498px-WPVG_icon_2016.svg.png"> -->
-            </div>
-        
-            <div class="select-choice count-in" id="paper">
-              <button name="paper-btn" id="paper-btn">Paper button</button>
-                <!-- <img class="img-paper" src="https://res.cloudinary.com/itsellej/image/upload/v1533400143/rock-paper-scissors/paper.png"> -->
-            </div>
-            <div class="select-choice count-in" id="scissors">
-              <button name="scissors-btn" id="scissors-btn">Scissors button</button>
-                <!-- <img class="img-scissors" src="https://res.cloudinary.com/itsellej/image/upload/v1533400144/rock-paper-scissors/scissors.png"> -->
-            </div>
-        </div>
+  <div id="result"></div>
 
+  <p id="instruction">Select your weapon of choice, amigo!</p>
+  <div class="choice">
+    <div class="select-choice count-in" id="rock">
+      <button name="rock-btn" id="rock-btn"></button>
     </div>
+
+    <div class="select-choice count-in" id="paper">
+      <button name="paper-btn" id="paper-btn"></button>
+    </div>
+    <div class="select-choice count-in" id="scissors">
+      <button name="scissors-btn" id="scissors-btn"></button>
+    </div>
+  </div>
+
+</div>
 </body>
 
 </html>
