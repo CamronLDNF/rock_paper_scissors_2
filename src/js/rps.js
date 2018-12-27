@@ -1,7 +1,28 @@
 function RPS()  {
 
-  // let computerSays = document.getElementById('computer-says');
-  // let instruction = document.getElementById('instruction');
+  let computerSays = document.getElementById('computer-says');
+  let instruction = document.getElementById('instruction');
+
+  this.getComputerChoice = function () {
+    number = Math.floor(Math.random()*3)
+    switch (number) {
+    case 0:
+    return 'rock';
+    case 1:
+    return 'paper';
+    case 2:
+    return 'scissors';}
+}
+
+  this.resetGame = function () {
+  // setTimeout(function(){ 
+  // computerImage.src = gameImage;
+  computerChoice = '';
+  userChoice = '';
+  computerSays.innerHTML = '';
+  instruction.innerHTML = 'Play again:';
+  // }, 1500);
+}
 
   this.determineWinner = (userChoice, computerChoice) => {
 
